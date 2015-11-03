@@ -15,15 +15,9 @@ teachersurvey: https://gather.typeform.com/to/rLqMQK
 
     {% for chapter in site.data.courses[page.course] %}
 
-    <div class="chapter col-md-4">
-        <a href="{{ chapter.name }}">
-            <div class="badge">
-                <img src="{{ site.baseurl }}/media/images/icons/{{ chapter.name }}.png">
-            </div>
-            <span class="subtitle">{{ chapter.subtitle }}</span>
-            <span class="title">{{ chapter.title }}</span>
-        </a>
-    </div>
+
+        {% include chapter-tile.html %}
+
 
     {% endfor %}
 

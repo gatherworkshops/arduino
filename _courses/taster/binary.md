@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Welcome
+title: Binary Blink
 slides:
 
   - title: title-page
@@ -18,17 +18,18 @@ slides:
 
       ![Gather Workshops Logo]([[BASE_URL]]/assets/images/gw_logo.png)
 
-      # Arduino Taster
-      _Electronics with Arduino_
+      # Building with jQuery
+      _Create and publish an interactive website_
 
 
-##########
 
 
   - title: mentors
+    section: welcome
+    layout: slide
+    class: centered-slide
 
     notes: |
-
       Your mentors are super friendly, make sure to say hi.
 
       They actually get paid to do this stuff for a job, which is super cool.
@@ -45,10 +46,12 @@ slides:
       and you can ask them (almost) anything!
 
 
-##########
 
 
   - title: introductions
+    section: welcome
+    layout: slide
+    class: centered-slide
 
     notes: |
       Let's quickly go around the room and introduce ourselves.
@@ -68,19 +71,21 @@ slides:
       - Favourite thing?
       - Super power?
       - First name?
-
+      
       <!-- .element class="flex-list" -->
 
 
-##########
 
 
   - title: schedule
+    section: welcome
+    layout: slide
+    class: centered-slide
 
     notes: |
       Today's workshop is arranged in six different sections.
 
-      In the first part we will look at how the Internet works and what this means for us as coders, plus take a look at the basics of web code languages.
+      In the first part we will look at how the Internet works and what this means for us as coders, plus take a look at the basics of web code languages. 
 
       After that we will start working on our own websites, so think about a topic! We will design a page layout and a menu bar.
 
@@ -91,17 +96,36 @@ slides:
       ## Schedule
       <br>
 
-      **Blinking Lights**<br>
-      **On/Off Buttons**
+      **HTML and CSS Recap**<br>
+      **jQuery Basics**
 
-      **Multicolour Lights**<br>
-      **Turning Dials**
+      _Morning Break_
 
-      **Rotating Objects**<br>
-      **Flex Sensors**
+      **Pixel Art**<br>
+      **Bubble Art**
+
+      _Lunch Break_
+
+      **Animation**<br>
+      **Bubble Pop Game**
 
 
-##########
+
+
+  #- title: examples
+  #  section: welcome
+  #  layout: slide
+  #  class: centered-slide
+  #
+  #  notes: |
+  #    Here are some examples of sites other students have made at a workshop.
+  #
+  #  content: |
+  #
+  #    ## Student Sites
+  #
+  #    TODO: Images go here
+
 
 
   - title: summary
@@ -120,7 +144,6 @@ slides:
 
       Great, now it's time for the fun stuff...
 
-      [Take me to the next chapter!](binary)
-
+      [Take me to the next chapter!](../jquerybasics)
 
 ---

@@ -3,7 +3,6 @@ taster:
     subtitle: Course Intro
     title: Welcome
     description: Overview and required software setup
-    published: false
 
   - name: binary
     subtitle: Chapter One
@@ -14,11 +13,11 @@ taster:
   - name: spectrum
     subtitle: Chapter Two
     title: Spinning Spectrum
-    description: Value ranges with dials and multicolor lights
+    description: Value ranges with dials and lights
     published: false
 
-  - name: servo
+  - name: flexor
     subtitle: Chapter Three
     title: Flexi Follower
-    description: Synchronising input ranges with rotating outputs
+    description: Synchronising input ranges with rotation
     published: false
