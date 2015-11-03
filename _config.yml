@@ -1,0 +1,19 @@
+name: Electronics with Arduino
+baseurl: "/arduino"
+markdown: redcarpet
+highlighter: pygments
+exclude: ["node_modules", "Gemfile", "Gruntfile.js", "package.json", "README.md"]
+
+sass:
+    sass_dir: _sass
+    
+collections:
+  assets:
+    output: true
+  courses:
+    output: true
+    layout: chapter
+
+
+# theme
+themecolor: "#8E0E00"

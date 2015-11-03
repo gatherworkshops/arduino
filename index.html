@@ -1,0 +1,63 @@
+---
+layout: home
+title: Welcome
+tagline: An introduction to coding.
+
+courses:
+
+    - name: placeholder
+      title: Hour of Code
+      length: 1 hour
+      description: Coming Soon
+      published: false
+
+    - name: taster
+      title: Taster Workshop
+      length: 2.5 hours
+      description: Explore inputs and outputs
+
+    - name: placeholder
+      title: Full Workshop
+      length: 5 hours
+      description: Coming Soon
+      published: false
+
+    - name: placeholder
+      title: NCEA Level One
+      length: 10 hours
+      description: Coming Soon
+      published: false
+
+    - name: placeholder
+      title: NCEA Level Two
+      length: 10 hours
+      description: Coming Soon
+      published: false
+
+    - name: placeholder
+      title: NCEA Level Three
+      length: 10 hours
+      description: Coming soon
+---
+
+<div class="container page-header">
+    <h1>{{ site.name }}</h1>
+    <p>{{ page.tagline }}</p>
+</div>
+
+<div class="container">
+    <div class="row chapter-links">
+
+
+
+        {% for course in page.courses %}
+
+            {% include course-tile.html %}
+
+        {% endfor %}
+
+
+
+    </div>
+</div>
+

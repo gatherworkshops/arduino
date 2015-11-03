@@ -1,0 +1,24 @@
+taster:
+  - name: welcome
+    subtitle: Course Intro
+    title: Welcome
+    description: Overview and required software setup
+    published: false
+
+  - name: binary
+    subtitle: Chapter One
+    title: Binary Blink
+    description: On and off states with buttons and lights
+    published: false
+
+  - name: spectrum
+    subtitle: Chapter Two
+    title: Spinning Spectrum
+    description: Value ranges with dials and multicolor lights
+    published: false
+
+  - name: servo
+    subtitle: Chapter Three
+    title: Flexi Follower
+    description: Synchronising input ranges with rotating outputs
+    published: false
