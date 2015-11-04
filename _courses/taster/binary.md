@@ -214,8 +214,7 @@ slides:
 
     content: |
 
-      ![Thumbs Up!]([[THEME_IMAGES]]/thumbs-up.svg)
-      <!-- .element height="200" -->
+      ![Thumbs Up!]([[THEME_IMAGES]]/thumbs-up.svg){:height="200"}
 
       ## Binary Blink: Complete!
 
