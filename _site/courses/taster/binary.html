@@ -10,26 +10,26 @@
         <meta name="google-translate-customization" content="a148a80643fbe5d7-b9de7b0f0180d6d8-g318479cea978092f-2b"></meta>
 
         <!-- Bootstrap -->
-        <link href="/arduino/assets/submodules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/arduino/theme/assets/submodules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/arduino/assets/submodules/jquery/jquery-1.11.2.min.js"></script>
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/arduino/assets/submodules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/arduino/theme/assets/submodules/bootstrap/js/bootstrap.min.js"></script>
 
         <!-- Custom Fonts -->
         <link href="http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic" rel="stylesheet" type="text/css">
 
         <!-- revealjs for slideshows -->
-        <link rel="stylesheet" href="/arduino/assets/submodules/revealjs/css/reveal.min.css">
+        <link rel="stylesheet" href="/arduino/theme/assets/submodules/revealjs/css/reveal.min.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/arduino/assets/css/styles.css">
+        <link rel="stylesheet" href="/arduino/theme/assets/css/styles.css">
 
         <!-- Prism -->
-        <link rel="stylesheet" href="/arduino/assets/submodules/prism/prism.css">
-        <script src="/arduino/assets/submodules/prism/prism.js"></script>
+        <link rel="stylesheet" href="/arduino/theme/assets/submodules/prism/prism.css">
+        <script src="/arduino/theme/assets/submodules/prism/prism.js"></script>
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="/arduino/favicon.ico">
@@ -51,7 +51,7 @@
       </button>
 
       <a class="navbar-brand" href="/arduino/">
-      	<img class="avatar" src="/arduino/assets/images/gw-avatar.png">
+      	<img class="avatar" src="/arduino/theme/assets/images/gw-avatar.png">
       	Electronics with Arduino 
         <span class="title"> | </span>
       </a>
@@ -127,7 +127,6 @@
 
 <!-- slide -->
 <section class="title-slide"
-	data-markdown
 		
 	
 		id=""
@@ -137,18 +136,15 @@
 		data-background-repeat="repeat"
 	
 	>
-    
-    <script type="text/template">
 		
 
-![Gather Workshops Logo](/arduino/assets/images/gw_logo.png)
+<p><img src="/arduino/theme/assets/images/gw_logo.png" alt="Gather Workshops Logo" /></p>
 
-# Building with jQuery
-_Create and publish an interactive website_
+<h1 id="binary-blink">Binary Blink</h1>
+<p><em>Light on, light off.</em></p>
 
 
-Note:
-
+<aside class="notes">
 
 Welcome to Electronics with Arduino!
 
@@ -156,129 +152,264 @@ This taster is designed to introduce you to the basics of sensor input and real-
 
 By the end of the workshop you will have built and coded a selection of small electronics demo projects.
 
-
-	</script>
+</aside>
 
 </section>
 
 
 
 <!-- slide -->
-<section class="centered-slide"
-	data-markdown
+<section class=""
 		
 	
-		id="mentors"
+		id="overview"
 	
 	>
-    
-    <script type="text/template">
 		
 
-## Say hi to your mentors!
+<h2 id="what-we-are-making">What We Are Making</h2>
 
-Your mentors are here to help if you get stuck,<br>
-and you can ask them (almost) anything!
-
-
-Note:
-
-Your mentors are super friendly, make sure to say hi.
-
-They actually get paid to do this stuff for a job, which is super cool.
-
-You can ask them for help with your code, ask them about their day job, or ask them what their favourite colour is.
-
-They're here to help, so ask them anything :)
+<p>Turn a light on and off by pushing a button.</p>
 
 
-	</script>
+<aside class="notes">
+Turn a light on and off by pushing a button.
+
+</aside>
 
 </section>
 
 
 
 <!-- slide -->
-<section class="centered-slide"
-	data-markdown
+<section class=""
 		
 	
-		id="introductions"
+		id="hardware"
 	
 	>
-    
-    <script type="text/template">
 		
 
-## Introductions
+<h2 id="bits-we-need">Bits We Need</h2>
 
-What is your:
-
-- Favourite thing?
-- Super power?
-- First name?
-
-<!-- .element class="flex-list" -->
+<p>LED, Button, Wires</p>
 
 
-Note:
+<aside class="notes">
 
-Let's quickly go around the room and introduce ourselves.
+LED, Button, Wires
 
-Tell us all one of your favourite things - favourite food, sport, hobby, animal, anything!
-
-If you could choose one super power, which would it be?
-
-Last of all, tell us your name.
-
-
-	</script>
+</aside>
 
 </section>
 
 
 
 <!-- slide -->
-<section class="centered-slide"
-	data-markdown
+<section class=""
 		
 	
-		id="schedule"
+		id="output"
 	
 	>
-    
-    <script type="text/template">
 		
 
-## Schedule
-<br>
+<h2 id="connecting-your-output">Connecting Your Output</h2>
 
-**HTML and CSS Recap**<br>
-**jQuery Basics**
-
-_Morning Break_
-
-**Pixel Art**<br>
-**Bubble Art**
-
-_Lunch Break_
-
-**Animation**<br>
-**Bubble Pop Game**
+<p>Set up your LED as in the diagram.</p>
 
 
-Note:
+<aside class="notes">
 
-Today's workshop is arranged in six different sections.
+Set up your LED as in the diagram.
 
-In the first part we will look at how the Internet works and what this means for us as coders, plus take a look at the basics of web code languages. 
+</aside>
 
-After that we will start working on our own websites, so think about a topic! We will design a page layout and a menu bar.
-
-Later we will add some fancy extras to our site, like YouTube videos and a gallery.
+</section>
 
 
-	</script>
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="testoutput"
+	
+	>
+		
+
+<h2 id="testing-your-output">Testing Your Output</h2>
+
+<p>Check that your LED works by turning it on.</p>
+
+<p class="checkpoint">Your LED should turn on and stay on.</p>
+
+
+<aside class="notes">
+
+Check that your LED works by turning it on.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="input"
+	
+	>
+		
+
+<h2 id="connecting-your-input">Connecting Your Input</h2>
+
+<p>Set up your button as in the diagram.</p>
+
+
+<aside class="notes">
+
+Set up your button as in the diagram.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="testinput"
+	
+	>
+		
+
+<h2 id="testing-your-input">Testing Your Input</h2>
+
+<p>Check that your button works by tracing its value in your browser.</p>
+
+<p class="checkpoint">Your button value should change each time you press it.</p>
+
+
+<aside class="notes">
+
+Check that your button works by tracing its value in your browser.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="visualflow"
+	
+	>
+		
+
+<h2 id="data-flow-chart">Data Flow Chart</h2>
+
+<p>Use flowchart blocks to pass your button input to your LED output via a function.</p>
+
+
+<aside class="notes">
+
+Use flowchart blocks to pass your button input to your LED output via a function.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="function"
+	
+	>
+		
+
+<h2 id="conversion-function">Conversion Function</h2>
+
+<p>Use a function to convert the button’s voltage reading to an on/off message for the LED.</p>
+
+
+<aside class="notes">
+
+Use a function to convert the button's voltage reading to an on/off message for the LED.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="context"
+	
+	>
+		
+
+<h2 id="storing-state">Storing State</h2>
+
+<pre><code class="language-javascript">if(context.lighton === undefined) {
+    context.lighton = false;
+}
+
+if(msg.payload === true) {
+    context.lightOn = !context.lightOn;
+    msg.payload = context.lightOn;
+}
+
+return msg;
+</code></pre>
+
+<p>We can use the <code>context</code> object to store the state.<br />
+This allows us to toggle on/off with the button.</p>
+
+
+<aside class="notes">
+
+We can use the `context` object to store the state.
+This allows us to toggle on/off with the button.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="challenge"
+	
+	>
+		
+
+<h2 id="challenge-stop-and-go">Challenge: Stop and Go</h2>
+
+<p>Add another LED to your circuit to make a stop/go light.</p>
+
+
+<aside class="notes">
+
+Add another LED to your circuit to make a stop/go light.
+
+</aside>
 
 </section>
 
@@ -286,33 +417,28 @@ Later we will add some fancy extras to our site, like YouTube videos and a galle
 
 <!-- slide -->
 <section class="centered-slide"
-	data-markdown
 		
 	
 		id="summary"
 	
 	>
-    
-    <script type="text/template">
 		
 
-![Thumbs Up!](/arduino/assets/images/thumbs-up.svg)
-<!-- .element height="200" -->
+<p><img src="/arduino/theme/assets/images/thumbs-up.svg" alt="Thumbs Up!" /><br />
+<!-- .element height="200" --></p>
 
-## Intro Stuff: Complete!
+<h2 id="binary-blink-complete">Binary Blink: Complete!</h2>
 
-Great, now it's time for the fun stuff...
+<p>Cool, now let’s try something a little more complex…</p>
 
-[Take me to the next chapter!](../jquerybasics)
+<p><a href="spectrum">Take me to the next chapter!</a></p>
 
 
-Note:
-
+<aside class="notes">
 
 Great! Now that's all sorted, let's get started!
 
-
-	</script>
+</aside>
 
 </section>
 
@@ -339,12 +465,13 @@ Great! Now that's all sorted, let's get started!
 
 
 
+
 		</div>
 
 
 
-		<script src="/arduino/assets/submodules/revealjs/lib/js/head.min.js"></script>
-<script src="/arduino/assets/submodules/revealjs/js/reveal.min.js"></script>
+		<script src="/arduino/theme/assets/submodules/revealjs/lib/js/head.min.js"></script>
+<script src="/arduino/theme/assets/submodules/revealjs/js/reveal.min.js"></script>
 
 <script>
 
@@ -361,13 +488,13 @@ Great! Now that's all sorted, let's get started!
 
 		// Optional libraries used to extend on reveal.js
 		dependencies: [
-			{ src: '/arduino/assets/submodules/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			{ src: '/arduino/assets/submodules/revealjs/plugin/markdown/marked.js' },
-			{ src: '/arduino/assets/submodules/revealjs/plugin/markdown/markdown.js' },
-			{ src: '/arduino/assets/submodules/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-			{ src: '/arduino/assets/submodules/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-			{ src: '/arduino/assets/submodules/sidenotes/sidenotes.js' },
-			{ src: '/arduino/assets/submodules/prism/prism.js', callback: function() { Prism.highlightAll() }}
+			{ src: '/arduino/theme/assets/submodules/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			/*{ src: '/arduino/assets/submodules/revealjs/plugin/markdown/marked.js' },
+			{ src: '/arduino/assets/submodules/revealjs/plugin/markdown/markdown.js' },*/
+			{ src: '/arduino/theme/assets/submodules/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '/arduino/theme/assets/submodules/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: '/arduino/theme/assets/submodules/sidenotes/sidenotes.js' }
+			/*{ src: '/arduino/assets/submodules/prism/prism.js', callback: function() { Prism.highlightAll() }}*/
 		]
 	});
     

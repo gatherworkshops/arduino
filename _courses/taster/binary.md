@@ -16,116 +16,193 @@ slides:
 
     content: |
 
-      ![Gather Workshops Logo]([[BASE_URL]]/assets/images/gw_logo.png)
+      ![Gather Workshops Logo]([[THEME_IMAGES]]/gw_logo.png)
 
-      # Building with jQuery
-      _Create and publish an interactive website_
-
-
+      # Binary Blink
+      _Light on, light off._
 
 
-  - title: mentors
-    section: welcome
-    layout: slide
-    class: centered-slide
+##########
+
+
+  - title: overview
 
     notes: |
-      Your mentors are super friendly, make sure to say hi.
-
-      They actually get paid to do this stuff for a job, which is super cool.
-
-      You can ask them for help with your code, ask them about their day job, or ask them what their favourite colour is.
-
-      They're here to help, so ask them anything :)
+      Turn a light on and off by pushing a button.
 
     content: |
 
-      ## Say hi to your mentors!
+      ## What We Are Making
 
-      Your mentors are here to help if you get stuck,<br>
-      and you can ask them (almost) anything!
-
+      Turn a light on and off by pushing a button.
 
 
+##########
 
-  - title: introductions
-    section: welcome
-    layout: slide
-    class: centered-slide
+  
+  - title: hardware
 
     notes: |
-      Let's quickly go around the room and introduce ourselves.
 
-      Tell us all one of your favourite things - favourite food, sport, hobby, animal, anything!
-
-      If you could choose one super power, which would it be?
-
-      Last of all, tell us your name.
+      LED, Button, Wires
 
     content: |
 
-      ## Introductions
+      ## Bits We Need
 
-      What is your:
+      LED, Button, Wires
 
-      - Favourite thing?
-      - Super power?
-      - First name?
+
+###########
+
+
+  - title: output
+
+    notes: |
+
+      Set up your LED as in the diagram.
+
+    content: |
+
+      ## Connecting Your Output
+
+      Set up your LED as in the diagram.
+
+
+##########
+
+
+  - title: testoutput
+
+    notes: |
+
+      Check that your LED works by turning it on.
+
+    content: |
+
+      ## Testing Your Output
+
+      Check that your LED works by turning it on.
+
+      Your LED should turn on and stay on.
+      {: .checkpoint}
+
+
+##########
+
+
+  - title: input
+
+    notes: |
+
+      Set up your button as in the diagram.
+
+    content: |
+
+      ## Connecting Your Input
+
+      Set up your button as in the diagram.
+
+
+##########
+
+  
+  - title: testinput
+
+    notes: |
+
+      Check that your button works by tracing its value in your browser.
+
+    content: |
+
+      ## Testing Your Input
+
+      Check that your button works by tracing its value in your browser.
+
+      Your button value should change each time you press it.
+      {: .checkpoint}
+
+
+##########
+
+
+  - title: visualflow
+
+    notes: |
+
+      Use flowchart blocks to pass your button input to your LED output via a function.
+
+    content: |
+
+      ## Data Flow Chart
+
+      Use flowchart blocks to pass your button input to your LED output via a function.
+
+
+##########
+
+
+  - title: function
+
+    notes: |
+
+      Use a function to convert the button's voltage reading to an on/off message for the LED.
+
+    content: |
+
+      ## Conversion Function
+
+      Use a function to convert the button's voltage reading to an on/off message for the LED.
+
+
+##########
+
+  - title: context
+
+    notes: |
+
+      We can use the `context` object to store the state.
+      This allows us to toggle on/off with the button.
+
+    content: |
+
+      ## Storing State
+
+      ```javascript
+      if(context.lighton === undefined) {
+          context.lighton = false;
+      }
       
-      <!-- .element class="flex-list" -->
+      if(msg.payload === true) {
+          context.lightOn = !context.lightOn;
+          msg.payload = context.lightOn;
+      }
+
+      return msg;
+      ```
+
+      We can use the `context` object to store the state.
+      This allows us to toggle on/off with the button.
 
 
+##########
 
 
-  - title: schedule
-    section: welcome
-    layout: slide
-    class: centered-slide
+  - title: challenge
 
     notes: |
-      Today's workshop is arranged in six different sections.
 
-      In the first part we will look at how the Internet works and what this means for us as coders, plus take a look at the basics of web code languages. 
-
-      After that we will start working on our own websites, so think about a topic! We will design a page layout and a menu bar.
-
-      Later we will add some fancy extras to our site, like YouTube videos and a gallery.
+      Add another LED to your circuit to make a stop/go light.
 
     content: |
 
-      ## Schedule
-      <br>
+      ## Challenge: Stop and Go
 
-      **HTML and CSS Recap**<br>
-      **jQuery Basics**
-
-      _Morning Break_
-
-      **Pixel Art**<br>
-      **Bubble Art**
-
-      _Lunch Break_
-
-      **Animation**<br>
-      **Bubble Pop Game**
+      Add another LED to your circuit to make a stop/go light.
 
 
 
-
-  #- title: examples
-  #  section: welcome
-  #  layout: slide
-  #  class: centered-slide
-  #
-  #  notes: |
-  #    Here are some examples of sites other students have made at a workshop.
-  #
-  #  content: |
-  #
-  #    ## Student Sites
-  #
-  #    TODO: Images go here
-
+##########
 
 
   - title: summary
@@ -137,13 +214,13 @@ slides:
 
     content: |
 
-      ![Thumbs Up!]([[BASE_URL]]/assets/images/thumbs-up.svg)
+      ![Thumbs Up!]([[THEME_IMAGES]]/thumbs-up.svg)
       <!-- .element height="200" -->
 
-      ## Intro Stuff: Complete!
+      ## Binary Blink: Complete!
 
-      Great, now it's time for the fun stuff...
+      Cool, now let's try something a little more complex...
 
-      [Take me to the next chapter!](../jquerybasics)
+      [Take me to the next chapter!](spectrum)
 
 ---

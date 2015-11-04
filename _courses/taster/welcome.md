@@ -16,7 +16,7 @@ slides:
 
     content: |
 
-      ![Gather Workshops Logo]([[BASE_URL]]/assets/images/gw_logo.png)
+      ![Gather Workshops Logo]([[THEME_IMAGES]]/gw_logo.png)
 
       # Arduino Taster
       _Electronics with Arduino_
@@ -41,7 +41,7 @@ slides:
 
       ## Say hi to your mentors!
 
-      Your mentors are here to help if you get stuck,<br>
+      Your mentors are here to help if you get stuck,
       and you can ask them (almost) anything!
 
 
@@ -68,8 +68,8 @@ slides:
       - Favourite thing?
       - Super power?
       - First name?
-
-      <!-- .element class="flex-list" -->
+      
+      {:.flex-list}
 
 
 ##########
@@ -91,14 +91,62 @@ slides:
       ## Schedule
       <br>
 
-      **Blinking Lights**<br>
+      **Blinking Lights**
       **On/Off Buttons**
 
-      **Multicolour Lights**<br>
+      **Multicolour Lights**
       **Turning Dials**
 
-      **Rotating Objects**<br>
+      **Rotating Objects**
       **Flex Sensors**
+
+
+##########
+
+
+  - title: arduinokit
+
+    notes: |
+
+      We are using the Sparkfun Inventor's Kit v3.2
+
+    content: |
+
+      ## SparkFun Inventor's Kit
+
+      We are using the Sparkfun Inventor's Kit v3.2
+
+
+##########
+
+
+  - title: arduinoapp
+
+    notes: |
+
+      We need the Arduino App to set up our board.
+
+    content: |
+
+      ## Arduino App
+
+      We need the Arduino App to set up our board.
+
+
+##########
+
+
+  - title: nodered
+
+    notes: |
+
+      We are using Node Red as a visual alternative to coding Arduino by hand.
+
+    content: |
+
+      ## Node Red
+
+      We are using Node Red as a visual code editor.
 
 
 ##########
@@ -113,8 +161,7 @@ slides:
 
     content: |
 
-      ![Thumbs Up!]([[BASE_URL]]/assets/images/thumbs-up.svg)
-      <!-- .element height="200" -->
+      ![Thumbs Up!]([[THEME_IMAGES]]/thumbs-up.svg){: height="200"}
 
       ## Intro Stuff: Complete!
 
