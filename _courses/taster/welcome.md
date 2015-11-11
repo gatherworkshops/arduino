@@ -172,7 +172,7 @@ slides:
 
       Plug your Arduino into your computer and link up the breadboard.
 
-      The green "ON" light should be on. 
+      The board's green "ON" light should be on. 
       {:.checkpoint}
 
 
