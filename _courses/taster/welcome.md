@@ -114,6 +114,8 @@ slides:
 
       ## SparkFun Inventor's Kit
 
+      ![SparkFun Inventor's Kit]([[COURSE_IMAGES]]/slidecontent/sparkfun-inventors-kit.jpg){: height="350"}
+
       We are using the Sparkfun Inventor's Kit v3.2
 
 
@@ -129,6 +131,8 @@ slides:
     content: |
 
       ## Arduino App
+
+      ![Arduino Logo]([[COURSE_IMAGES]]/slidecontent/arduino-logo.png){: height="350"}
 
       We need the Arduino App to set up our board.
 
@@ -146,7 +150,62 @@ slides:
 
       ## Node Red
 
+      ![Node Red Logo]([[COURSE_IMAGES]]/slidecontent/node-red-logo.png){: height="350"}
+
       We are using Node Red as a visual code editor.
+
+
+##########
+
+
+  - title: arduinokitsetup
+
+    notes: |
+
+      Plug your RedBoard into your computer and link up the breadboard.
+
+    content: |
+
+      ## Setting Up Your Arduino
+
+      ![Arduino with Breadboard wiring diagram]([[COURSE_IMAGES]]/slidecontent/redboard-breadboard-wiring-diagram.svg){: height="450"}
+
+      Plug your Arduino into your computer and link up the breadboard.
+
+      The green "ON" light should be on. 
+      {:.checkpoint}
+
+
+##########
+
+
+  - title: standardfirmatasetup
+
+    notes: |
+
+      Open the Arduino app and use it to upload Standard Firmata
+
+    content: |
+
+      ## Setting Up Standard Firmata
+
+      Open the Arduino app and use it to upload Standard Firmata
+
+
+##########
+
+
+  - title: noderedsetup
+
+    notes: |
+
+      Open Node Red and create a blank sheet
+
+    content: |
+
+      ## Start Up the Node Red Server
+
+      Open Node Red and create a blank sheet
 
 
 ##########

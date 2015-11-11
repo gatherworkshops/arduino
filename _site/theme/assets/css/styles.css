@@ -448,7 +448,12 @@ body.chapter {
       flex: 1;
       text-align: center;
       border-right: 1px dotted rgba(0, 0, 0, 0.3);
-      padding: 20px 0; }
+      padding: 20px 0;
+      font-size: 70%;
+      line-height: 120%; }
+      .reveal .slides .flex-list > li strong {
+        font-size: 120%;
+        line-height: 150%; }
       .reveal .slides .flex-list > li:last-of-type {
         border-right: none; }
 
@@ -458,7 +463,9 @@ body.chapter {
   padding: 10px 10px 12px 20px;
   border-radius: 5px;
   text-align: left;
-  margin-top: 20px !important; }
+  margin-top: 20px !important;
+  display: inline-block;
+  max-width: 100%; }
   .reveal p.checkpoint:hover::after {
     background: white; }
   .reveal p.checkpoint::after {
@@ -470,6 +477,7 @@ body.chapter {
     border-radius: 5px;
     height: 100%;
     float: right;
+    margin-left: 20px;
     width: 5em;
     text-align: center; }
   .reveal p.checkpoint.checked {

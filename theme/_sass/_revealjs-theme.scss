@@ -199,6 +199,13 @@ $titleTextShadow: 2px 2px 1px darken($theme-color, 20%);
 				text-align: center;
 				border-right: 1px dotted rgba(0, 0, 0, 0.3);
 				padding: 20px 0;
+				font-size: 70%;
+				line-height: 120%;
+
+				strong {
+					font-size: 120%;
+					line-height: 150%;
+				}
 
 				&:last-of-type {
 					border-right: none;

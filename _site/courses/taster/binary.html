@@ -171,6 +171,8 @@ By the end of the workshop you will have built and coded a selection of small el
 
 <p>Turn a light on and off by pushing a button.</p>
 
+<iframe frameborder="0" height="448" marginheight="0" marginwidth="0" scrolling="no" src="https://123d.circuits.io/circuits/1195802-the-unnamed-circuit/embed#breadboard" width="650"></iframe>
+
 
 <aside class="notes">
 Turn a light on and off by pushing a button.
@@ -192,7 +194,20 @@ Turn a light on and off by pushing a button.
 
 <h2 id="bits-we-need">Bits We Need</h2>
 
-<p>LED, Button, Wires</p>
+<ul class="flex-list">
+  <li><img src="/arduino/media/images/slidecontent/led-red.svg" alt="Red LED" height="100" /><br />
+<strong>LED</strong><br />
+A visual output for our circuit</li>
+  <li><img src="/arduino/media/images/slidecontent/button.svg" alt="Button" height="100" /><br />
+<strong>Button</strong><br />
+An input, used to turn our light on and off</li>
+  <li><img src="/arduino/media/images/slidecontent/resistor-10k.svg" alt="10k Ohm Resistor" height="100" /><br />
+<strong>10k Resistor</strong><br />
+To regulate the voltage readings from the button</li>
+  <li><img src="/arduino/media/images/slidecontent/wire.png" alt="Wire" height="100" /><br />
+<strong>Wires</strong><br />
+To connect everything together!</li>
+</ul>
 
 
 <aside class="notes">
@@ -209,12 +224,39 @@ LED, Button, Wires
 <section class=""
 		
 	
-		id="output"
+		id="led-overview"
 	
 	>
 		
 
-<h2 id="connecting-your-output">Connecting Your Output</h2>
+<h2 id="led-overview">LED Overview</h2>
+
+<p>Setting up our LED will consist of two parts:<br />
+the physical components, and the logical components</p>
+
+
+<aside class="notes">
+
+:)
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="led-physical-components"
+	
+	>
+		
+
+<h2 id="physical-components-brof-the-led-circuit">Physical Components <br />of the LED Circuit</h2>
+
+<p><img src="/arduino/media/images/slidecontent/binaryblink-output-wiring-diagram.svg" alt="Output wiring diagram" height="550" /></p>
 
 <p>Set up your LED as in the diagram.</p>
 
@@ -233,14 +275,155 @@ Set up your LED as in the diagram.
 <section class=""
 		
 	
-		id="testoutput"
+		id="led-logical-components"
 	
 	>
 		
 
-<h2 id="testing-your-output">Testing Your Output</h2>
+<h2 id="logical-components-brof-the-led-circuit">Logical Components <br />of the LED Circuit</h2>
 
-<p>Check that your LED works by turning it on.</p>
+<ul class="flex-list">
+  <li><img src="/arduino/media/images/slidecontent/test-button.svg" alt="Test Button" height="200" /><br />
+<strong>Test Button</strong><br />
+On-screen button, sends message<br />
+that light should turn on.</li>
+  <li><img src="/arduino/media/images/slidecontent/arduino-out.svg" alt="Arduino Out" height="200" /><br />
+<strong>Light Output</strong><br />
+Converts test button message<br />
+into an Arduino signal.</li>
+</ul>
+
+
+<aside class="notes">
+
+Check that your LED works by turning it on.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="led-out-node"
+	
+	>
+		
+
+<h2 id="pass-a-message-out-to-the-arduino">Pass a Message Out to the Arduino</h2>
+
+<p><img src="/arduino/media/images/slidecontent/led-node-config.png" alt="LED Node Configuration" height="450" /></p>
+
+<p>Drag an <code>arduino out</code> node into your workspace and configure it.</p>
+
+
+<aside class="notes">
+
+Drag an `arduino out` node into your workspace and configure it.
+
+This will pass a message to the configured pin, but will not run automatically. We need to trigger it.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="output-inject-node"
+	
+	>
+		
+
+<h2 id="inject-a-message">Inject a Message</h2>
+
+<p><img src="/arduino/media/images/slidecontent/inject-node-config.png" alt="Inject Node Configuration" height="450" /></p>
+
+<p>Drag an <code>inject</code> node into your workspace and configure it.</p>
+
+
+<aside class="notes">
+
+Drag an `inject` node into your workspace and configure it.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="output-join-nodes"
+	
+	>
+		
+
+<h2 id="connect-the-nodes">Connect the nodes</h2>
+
+<p><img src="/arduino/media/images/slidecontent/binaryblink-output-join-nodes.png" alt="Inject Node Configuration" height="450" /></p>
+
+<p>Click and drag the small square on the <code>inject</code> node,<br />
+and attach it to the <code>arduino out</code> node.</p>
+
+
+<aside class="notes">
+
+Connect the two nodes.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="output-deploy"
+	
+	>
+		
+
+<h2 id="deploy-your-code">Deploy Your Code</h2>
+
+<p><img src="/arduino/media/images/slidecontent/deploy-code.png" alt="Deploying Node Red code to the Arduino" /></p>
+
+<p>Click the “Deploy” button in Node Red<br />
+to link your logic flow with the Arduino.</p>
+
+
+<aside class="notes">
+
+Drag an `inject` node into your workspace and configure it.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="output-test"
+	
+	>
+		
+
+<h2 id="test-the-led-output">Test the LED Output</h2>
+
+<p>Click the square trigger button on the <code>inject</code> node.</p>
 
 <p class="checkpoint">Your LED should turn on and stay on.</p>
 
@@ -259,12 +442,39 @@ Check that your LED works by turning it on.
 <section class=""
 		
 	
-		id="input"
+		id="button-overview"
 	
 	>
 		
 
-<h2 id="connecting-your-input">Connecting Your Input</h2>
+<h2 id="button-overview">Button Overview</h2>
+
+<p>Setting up our button will also consist of two parts:<br />
+the physical components, and the logical components</p>
+
+
+<aside class="notes">
+
+:)
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="button-physical-components"
+	
+	>
+		
+
+<h2 id="physical-components-brof-the-button-circuit">Physical Components <br />of the Button Circuit</h2>
+
+<p><img src="/arduino/media/images/slidecontent/binaryblink-input-wiring-diagram.svg" alt="Output wiring diagram" height="550" /></p>
 
 <p>Set up your button as in the diagram.</p>
 
@@ -272,6 +482,37 @@ Check that your LED works by turning it on.
 <aside class="notes">
 
 Set up your button as in the diagram.
+
+</aside>
+
+</section>
+
+
+
+<!-- slide -->
+<section class=""
+		
+	
+		id="button-logical-components"
+	
+	>
+		
+
+<h2 id="logical-components-brof-the-button-circuit">Logical Components <br />of the Button Circuit</h2>
+
+<ul class="flex-list">
+  <li><strong>Button Input</strong><br />
+Converts the Arduino signal<br />
+into a JavaScript message.</li>
+  <li><strong>Debug Logger</strong><br />
+Displays the JS message on<br />
+the screen when received.</li>
+</ul>
+
+
+<aside class="notes">
+
+:)
 
 </aside>
 
@@ -424,8 +665,7 @@ Add another LED to your circuit to make a stop/go light.
 	>
 		
 
-<p><img src="/arduino/theme/assets/images/thumbs-up.svg" alt="Thumbs Up!" /><br />
-<!-- .element height="200" --></p>
+<p><img src="/arduino/theme/assets/images/thumbs-up.svg" alt="Thumbs Up!" height="200" /></p>
 
 <h2 id="binary-blink-complete">Binary Blink: Complete!</h2>
 
