@@ -52,16 +52,16 @@ slides:
 
       ## Bits We Need
 
-      - ![Red LED]([[COURSE_IMAGES]]/slidecontent/led-red.svg){: height="100"}
+      - ![Red LED]([[COURSE_IMAGES]]/slidecontent/arduino-led-red.svg){: height="100"}
         **LED**
         A visual output for our circuit
-      - ![Button]([[COURSE_IMAGES]]/slidecontent/button.svg){: height="100"}
+      - ![Button]([[COURSE_IMAGES]]/slidecontent/arduino-button.svg){: height="100"}
         **Button**
         An input, used to turn our light on and off
-      - ![10k Ohm Resistor]([[COURSE_IMAGES]]/slidecontent/resistor-10k.svg){: height="100"}
+      - ![10k Ohm Resistor]([[COURSE_IMAGES]]/slidecontent/arduino-resistor-10k.svg){: height="100"}
         **10k Resistor**
         To regulate the voltage readings from the button
-      - ![Wire]([[COURSE_IMAGES]]/slidecontent/wire.png){: height="100"}
+      - ![Wire]([[COURSE_IMAGES]]/slidecontent/arduino-wire.png){: height="100"}
         **Wires**
         To connect everything together!
       {:.flex-list}
@@ -97,7 +97,7 @@ slides:
 
       ## Physical Components <br>of the LED Circuit
 
-      ![Output wiring diagram]([[COURSE_IMAGES]]/slidecontent/binaryblink-output-wiring-diagram.svg){: height="550"}
+      ![Output wiring diagram]([[COURSE_IMAGES]]/slidecontent/binary-led-wiring-diagram.svg){: height="550"}
 
       Set up your LED as in the diagram.
 
@@ -115,11 +115,11 @@ slides:
 
       ## Logical Components <br>of the LED Circuit
 
-      - ![Test Button]([[COURSE_IMAGES]]/slidecontent/test-button.svg){: height="200"}
+      - ![Test Button]([[COURSE_IMAGES]]/slidecontent/nodered-inject.svg){: height="200"}
         **Test Button**
         On-screen button, sends message
         that light should turn on.
-      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/arduino-out.svg){: height="200"}
+      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/nodered-arduino-out.svg){: height="200"}
         **Light Output**
         Converts test button message
         into an Arduino signal.
@@ -141,7 +141,7 @@ slides:
 
       ## Pass a Message Out to the Arduino
 
-      ![LED Node Configuration]([[COURSE_IMAGES]]/slidecontent/led-node-config.png){: height="450"}
+      ![LED Node Configuration]([[COURSE_IMAGES]]/slidecontent/binary-led-arduino-node.png){: height="450"}
 
       Drag an `arduino out` node into your workspace and configure it.
 
@@ -149,7 +149,7 @@ slides:
 ##########
 
 
-  - title: output-inject-node
+  - title: led-inject-node
 
     notes: |
 
@@ -159,7 +159,7 @@ slides:
 
       ## Inject a Message
 
-      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/inject-node-config.png){: height="450"}
+      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/binary-led-inject-node.png){: height="450"}
 
       Drag an `inject` node into your workspace and configure it.
 
@@ -167,7 +167,7 @@ slides:
 ##########
 
 
-  - title: output-join-nodes
+  - title: led-join-nodes
 
     notes: |
 
@@ -177,7 +177,7 @@ slides:
 
       ## Connect the nodes
 
-      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/binaryblink-output-join-nodes.png){: height="450"}
+      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/binary-led-join-nodes.png){: height="450"}
 
       Click and drag the small square on the `inject` node,
       and attach it to the `arduino out` node.
@@ -186,7 +186,7 @@ slides:
 ##########
 
 
-  - title: output-deploy
+  - title: led-deploy
 
     notes: |
 
@@ -196,7 +196,7 @@ slides:
 
       ## Deploy Your Code
 
-      ![Deploying Node Red code to the Arduino]([[COURSE_IMAGES]]/slidecontent/deploy-code.png)
+      ![Deploying Node Red code to the Arduino]([[COURSE_IMAGES]]/slidecontent/nodered-deploy-code.png)
 
       Click the "Deploy" button in Node Red
       to link your logic flow with the Arduino.
@@ -251,7 +251,7 @@ slides:
 
       ## Physical Components <br>of the Button Circuit
 
-      ![Output wiring diagram]([[COURSE_IMAGES]]/slidecontent/binaryblink-input-wiring-diagram.svg){: height="550"}
+      ![Output wiring diagram]([[COURSE_IMAGES]]/slidecontent/binary-button-wiring-diagram.svg){: height="550"}
 
       Set up your button as in the diagram.
 
@@ -269,10 +269,12 @@ slides:
 
       ## Logical Components <br>of the Button Circuit
 
-      - **Button Input**
+      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/arduino-out.svg){: height="200"}
+        **Button Input**
         Converts the Arduino signal
         into a JavaScript message.
-      - **Debug Logger**
+      - ![Test Button]([[COURSE_IMAGES]]/slidecontent/test-button.svg){: height="200"}
+        **Debug Logger**
         Displays the JS message on
         the screen when received.
       {:.flex-list}
@@ -281,42 +283,153 @@ slides:
 ##########
 
 
-  - title: testinput
+  - title: button-arduino-node
 
     notes: |
 
-      Check that your button works by tracing its value in your browser.
+      Drag an `arduino out` node into your workspace and configure it.
+
+      This will pass a message to the configured pin, but will not run automatically. We need to trigger it.
 
     content: |
 
-      ## Testing Your Input
+      ## Receive a Message from the Arduino
 
-      Check that your button works by tracing its value in your browser.
+      ![Button Input Node Configuration]([[COURSE_IMAGES]]/slidecontent/binary-button-arduino-node.png){: height="450"}
 
-      Your button value should change each time you press it.
+      Drag an `arduino in` node into your workspace and configure it.
+
+
+##########
+
+
+  - title: button-debug-node
+
+    notes: |
+
+      Drag a `debug` node into your workspace and configure it.
+
+    content: |
+
+      ## Debug the Incoming Data
+
+      ![Button Debug Node Configuration]([[COURSE_IMAGES]]/slidecontent/binary-button-debug-node.png){: height="450"}
+
+      Drag a `debug` node into your workspace and configure it.
+
+
+##########
+
+
+  - title: button-join-nodes
+
+    notes: |
+
+      Connect the two nodes.
+
+    content: |
+
+      ## Connect the nodes
+
+      ![Join Button Nodes]([[COURSE_IMAGES]]/slidecontent/binary-button-join-nodes.png){: height="450"}
+
+      Click and drag the small square on the `arduino` node,
+      and attach it to the `debug` node.
+
+
+##########
+
+
+  - title: button-code-deploy
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Deploy Your Code
+
+      ![Deploying Node Red code to the Arduino]([[COURSE_IMAGES]]/slidecontent/nodered-deploy-code.png)
+
+      Click the "Deploy" button in Node Red
+      to link your logic flow with the Arduino.
+
+
+##########
+
+
+  - title: button-test
+
+    notes: |
+
+      Check that your LED works by turning it on.
+
+    content: |
+
+      ## Test the Button Input
+
+      Press your button down and up again.
+
+      You should see the debug message in your browser.
       {: .checkpoint}
 
 
 ##########
 
 
-  - title: visualflow
+  - title: circuit-logical-components
 
     notes: |
 
-      Use flowchart blocks to pass your button input to your LED output via a function.
+      :)
 
     content: |
 
-      ## Data Flow Chart
+      ## Logical Components <br>of the whole circuit
 
-      Use flowchart blocks to pass your button input to your LED output via a function.
+      - ![Arduino In]([[COURSE_IMAGES]]/slidecontent/nodered-arduino-in.svg){: height="200"}
+        **Button Input**
+        Receives an Arduino signal
+        as a JavaScript message.
+      - ![Function]([[COURSE_IMAGES]]/slidecontent/nodered-function.svg){: height="200"}
+        **Conversion Function**
+        Converts the button signal
+        into the correct message
+        for the LED.
+      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/nodered-arduino-out.svg){: height="200"}
+        **LED Output**
+        Sends the JavaScript message
+        as an Arduino signal.
+      {:.flex-list}
 
 
 ##########
 
 
-  - title: function
+  - title: circuit-arduino-nodes
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Circuit Arduino Nodes
+
+      ![Full Circuit with Arduino Nodes]([[COURSE_IMAGES]]/slidecontent/binary-circuit-arduino-nodes.png)
+
+      Link the Arduino input and ouput directly.
+
+      The LED should be on when the button is pressed down.
+      {:.checkpoint}
+
+
+
+##########
+
+
+  - title: circuit-function-node
 
     notes: |
 
@@ -326,12 +439,56 @@ slides:
 
       ## Conversion Function
 
-      Use a function to convert the button's voltage reading to an on/off message for the LED.
+      ![Full Circuit with Function Node]([[COURSE_IMAGES]]/slidecontent/binary-circuit-function-node.png)
+
+      Link a function between the `in` node and the `out` node,
+      so we can manipulate the value being passed along.
 
 
 ##########
 
-  - title: context
+
+  - title: circuit-function-code
+
+    notes: |
+
+      We can use the `context` object to store data between function calls.
+      This allows us to toggle on/off with the button.
+
+    content: |
+
+      ## Function Code
+
+      ```javascript
+      var buttonPressed = msg.payload;
+      var lightOn = context.lightOn;
+
+      if(lightOn === undefined) {
+          lightOn = false;
+      }
+      
+      if(buttonPressed === true) {
+          if(lightOn === true) {
+            lightOn = false;
+          } else {
+            lightOn = true;
+          }
+      }
+
+      context.lightOn = lightOn;
+      msg.payload = lightOn;
+
+      return msg;
+      ```
+
+      Paste this code into your `function` config popup,
+      in the code editor section.
+
+
+##########
+
+
+  - title: circuit-function-code-shorter
 
     notes: |
 
@@ -340,23 +497,61 @@ slides:
 
     content: |
 
-      ## Storing State
+      ## Shorter Function Code
 
       ```javascript
-      if(context.lighton === undefined) {
-          context.lighton = false;
-      }
+      var buttonPressed = msg.payload;
+      var lightOn = context.lightOn || false;
       
-      if(msg.payload === true) {
-          context.lightOn = !context.lightOn;
-          msg.payload = context.lightOn;
+      if(buttonPressed) {
+          lightOn = !lightOn;
       }
+
+      context.lightOn = lightOn;
+      msg.payload = lightOn;
 
       return msg;
       ```
+      **For experienced coders:**
+      This code does exactly the same thing,
+      but is a bit shorter.
 
-      We can use the `context` object to store the state.
-      This allows us to toggle on/off with the button.
+
+##########
+
+  - title: circuit-deploy
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Deploy Your Code
+
+      ![Deploying Node Red code to the Arduino]([[COURSE_IMAGES]]/slidecontent/nodered-deploy-code.png)
+
+      Click the "Deploy" button in Node Red
+      to link your logic flow with the Arduino.
+
+
+##########
+
+  - title: circuit-test
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Test
+
+      ![x](x)
+
+      Your button should now act like an on/off switch
+
+      {:.checkpoint}
 
 
 ##########
@@ -370,9 +565,11 @@ slides:
 
     content: |
 
+      ![Binary Traffic Light]([[COURSE_IMAGES]]/slidecontent/binary-traffic-light.gif)
+
       ## Challenge: Stop and Go
 
-      Add another LED to your circuit to make a stop/go light.
+      Add a green LED to your circuit to make a stop/go light.
 
 
 
@@ -384,7 +581,7 @@ slides:
 
     notes: |
 
-      Great! Now that's all sorted, let's get started!
+      Cool, now let's try something a little more complex...
 
     content: |
 
