@@ -1,133 +1,613 @@
 ---
 layout: chapter
-title: Hello World
+title: Spectrum Spinner
 slides:
 
   - title: title-page
-    section: welcome
-    layout: slide
     class: title-slide
 
     notes: |
 
-      Welcome to Building with jQuery!
-
-      This workshop is designed to introduce you to the basics of writing JavaScript with jQuery.
-
-      By the end of the workshop you will have coded and published a selection of small interactive code demos.
+      :)
 
     content: |
 
-      ![Gather Workshops Logo]([[BASE_URL]]/assets/images/gw_logo.png)
+      ![Gather Workshops Logo]([[THEME_IMAGES]]/gw_logo.png)
 
-      # Building with jQuery
-      _Create and publish an interactive website_
-
-
+      # Spectrum Spinner
+      _All the colours of the rainbow._
 
 
-  - title: mentors
-    section: welcome
-    layout: slide
-    class: centered-slide
+##########
+
+
+  - title: overview
 
     notes: |
-      Your mentors are super friendly, make sure to say hi.
-
-      They actually get paid to do this stuff for a job, which is super cool.
-
-      You can ask them for help with your code, ask them about their day job, or ask them what their favourite colour is.
-
-      They're here to help, so ask them anything :)
+      Change the colour of a light by turning a dial.
 
     content: |
 
-      ## Say hi to your mentors!
+      ## What We Are Making
 
-      Your mentors are here to help if you get stuck,<br>
-      and you can ask them (almost) anything!
-
+      Change the colour of a light by turning a dial.
 
 
+##########
 
-  - title: introductions
-    section: welcome
-    layout: slide
-    class: centered-slide
+
+  - title: hardware
 
     notes: |
-      Let's quickly go around the room and introduce ourselves.
 
-      Tell us all one of your favourite things - favourite food, sport, hobby, animal, anything!
-
-      If you could choose one super power, which would it be?
-
-      Last of all, tell us your name.
+      RGB LED, Button, Wires
 
     content: |
 
-      ## Introductions
+      ## Bits We Need
 
-      What is your:
+      - ![RGB LED]([[COURSE_IMAGES]]/slidecontent/arduino-led-rgb.svg){: height="200"}
+        **RGB LED**
+        A visual output for our circuit
+      - ![Button]([[COURSE_IMAGES]]/slidecontent/arduino-potentiometer.svg){: height="200"}
+        **Potentiometer**
+        A dial which outputs a range of values
+      - ![10k Ohm Resistor]([[COURSE_IMAGES]]/slidecontent/arduino-resistor-330ohm.svg){: height="200"}
+        **3x 330&#937; Resistor**
+        To regulate the voltage to the LED
+      - ![Wire]([[COURSE_IMAGES]]/slidecontent/arduino-wire.svg){: height="200"}
+        **Wires**
+        To connect everything together!
+      {:.flex-list}
 
-      - Favourite thing?
-      - Super power?
-      - First name?
-      
-      <!-- .element class="flex-list" -->
+
+###########
 
 
-
-
-  - title: schedule
-    section: welcome
-    layout: slide
-    class: centered-slide
+  - title: led-overview
 
     notes: |
-      Today's workshop is arranged in six different sections.
 
-      In the first part we will look at how the Internet works and what this means for us as coders, plus take a look at the basics of web code languages. 
-
-      After that we will start working on our own websites, so think about a topic! We will design a page layout and a menu bar.
-
-      Later we will add some fancy extras to our site, like YouTube videos and a gallery.
+      :)
 
     content: |
 
-      ## Schedule
-      <br>
+      ## LED Overview
 
-      **HTML and CSS Recap**<br>
-      **jQuery Basics**
-
-      _Morning Break_
-
-      **Pixel Art**<br>
-      **Bubble Art**
-
-      _Lunch Break_
-
-      **Animation**<br>
-      **Bubble Pop Game**
+      Setting up our LED will once again consist of two parts:
+      the physical components, and the logical components
 
 
+###########
 
 
-  #- title: examples
-  #  section: welcome
-  #  layout: slide
-  #  class: centered-slide
-  #
-  #  notes: |
-  #    Here are some examples of sites other students have made at a workshop.
-  #
-  #  content: |
-  #
-  #    ## Student Sites
-  #
-  #    TODO: Images go here
+  - title: led-info-sheet
+    class: info-sheet-slide
 
+    notes: |
+
+      :)
+
+    content: |
+
+      ![RGB LED Diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-led-info-diagram.png)
+
+      ## RBG LEDs
+
+      This LED can display a range of colours 
+      by mixing together levels of red, green and blue.
+
+      It has four pins: Red, Earth, Green, and Blue.
+
+      It requires 330 ohm resistors for each colour pin,
+      to keep values sent to the pins from interfering
+      with each other.
+
+
+###########
+
+
+  - title: led-physical-components
+
+    notes: |
+
+      Set up your LED as in the diagram.
+
+    content: |
+
+      ## Physical Components <br>of the LED Circuit
+
+      ![Output wiring diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-led-wiring-diagram.svg){: height="550"}
+
+      Set up your LED as in the diagram.
+
+
+##########
+
+
+  - title: led-logical-components
+
+    notes: |
+
+      Check that your LED works by turning it on.
+
+    content: |
+
+      ## Logical Components <br>of the LED Circuit
+
+      - ![Test Buttons]([[COURSE_IMAGES]]/slidecontent/spectrum-led-nodered-inject.png){: height="200"}
+        **Test Buttons**
+        On-screen buttons, one for each 
+        LED colour component.
+      - ![Arduino Outputs]([[COURSE_IMAGES]]/slidecontent/spectrum-led-nodered-arduino-out.png){: height="200"}
+        **Light Output**
+        One Arduino pin output for each
+        LED colour component.
+      {:.flex-list}
+
+
+##########
+
+
+  - title: led-out-node
+
+    notes: |
+
+      Drag an `arduino out` node into your workspace and configure it.
+
+      This will pass a message to the configured pin, but will not run automatically. We need to trigger it.
+
+    content: |
+
+      ## Pass a Message Out to the Arduino
+
+      ![LED Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-led-arduino-node.png){: height="450"}
+
+      Drag an `arduino out` node into your workspace and configure it.
+
+
+##########
+
+
+  - title: led-inject-node
+
+    notes: |
+
+      Drag an `inject` node into your workspace and configure it.
+
+    content: |
+
+      ## Inject a Message
+
+      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-led-inject-node.png){: height="450"}
+
+      Drag an `inject` node into your workspace and configure it.
+
+
+##########
+
+
+  - title: led-join-nodes
+
+    notes: |
+
+      Connect the two nodes.
+
+    content: |
+
+      ## Connect the nodes
+
+      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-led-join-nodes.png){: height="450"}
+
+      Click and drag the small square on the `inject` node,
+      and attach it to the `arduino out` node.
+
+
+##########
+
+
+  - title: led-deploy
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Deploy Your Code
+
+      ![Deploying Node Red code to the Arduino]([[COURSE_IMAGES]]/slidecontent/nodered-deploy-code.png)
+
+      Click the "Deploy" button in Node Red
+      to link your logic flow with the Arduino.
+
+
+##########
+
+
+  - title: led-test
+
+    notes: |
+
+      Check that your LED works by turning it on.
+
+    content: |
+
+      ## Test the LED Output
+
+      Click the square trigger button on the `inject` node.
+
+      Your LED should turn red.
+      {: .checkpoint}
+
+
+##########
+
+
+  - title: led-all-colours-test
+
+    notes: |
+
+      Check that your LED works by turning it on.
+
+    content: |
+
+      ## Test Green and Blue 
+
+      Add two more flows to test the green and blue.
+
+      The test buttons should all work correctly.
+      {: .checkpoint}
+
+
+###########
+
+
+  - title: potentiometer-overview
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Potentiometer Overview
+
+      Setting up our potentiometer will also consist of two parts:
+      the physical components, and the logical components
+
+
+##########
+
+
+  - title: potentiometer-physical-components
+
+    notes: |
+
+      Set up your potentiometer as in the diagram.
+
+    content: |
+
+      ## Physical Components <br>of the Potentiometer Circuit
+
+      ![Potentiometer wiring diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-wiring-diagram.svg){: height="550"}
+
+      Set up your potentiometer as in the diagram.
+
+
+##########
+
+
+  - title: potentiometer-logical-components
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Logical Components <br>of the Potentiometer Circuit
+
+      - ![Arduino In]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-nodered-arduino.png){: height="200"}
+        **Potentiometer Input**
+        Converts the Arduino signal
+        into a JavaScript message.
+      - ![Debug Node]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-nodered-debug.png){: height="200"}
+        **Debug Logger**
+        Displays the JS message on
+        the screen when received.
+      {:.flex-list}
+
+
+##########
+
+
+  - title: potentiometer-arduino-node
+
+    notes: |
+
+      Drag an `arduino out` node into your workspace and configure it.
+
+      This will pass a message to the configured pin, but will not run automatically. We need to trigger it.
+
+    content: |
+
+      ## Receive a Message from the Arduino
+
+      ![Button Input Node Configuration]([[COURSE_IMAGES]]/slidecontent/binary-button-arduino-node.png){: height="450"}
+
+      Drag an `arduino in` node into your workspace and configure it.
+
+
+##########
+
+
+  - title: potentiometer-debug-node
+
+    notes: |
+
+      Drag a `debug` node into your workspace and configure it.
+
+    content: |
+
+      ## Debug the Incoming Data
+
+      ![Button Debug Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-debug-node.png){: height="450"}
+
+      Drag a `debug` node into your workspace and configure it.
+
+
+##########
+
+
+  - title: potentiometer-join-nodes
+
+    notes: |
+
+      Connect the two nodes.
+
+    content: |
+
+      ## Connect the nodes
+
+      ![Join potentiometer Nodes]([[COURSE_IMAGES]]/slidecontent/binary-button-join-nodes.png){: height="450"}
+
+      Click and drag the small square on the `arduino` node,
+      and attach it to the `debug` node.
+
+
+##########
+
+
+  - title: potentiometer-code-deploy
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Deploy Your Code
+
+      ![Deploying Node Red code to the Arduino]([[COURSE_IMAGES]]/slidecontent/nodered-deploy-code.png)
+
+      Click the "Deploy" button in Node Red
+      to link your logic flow with the Arduino.
+
+
+##########
+
+
+  - title: potentiometer-test
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Test the potentiometer input
+
+      Turn the dial on your potentiometer.
+
+      You should see value being logged in your debug panel.
+      {: .checkpoint}
+
+
+##########
+
+
+  - title: circuit-logical-components
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Logical Components <br>of the whole circuit
+
+      - ![Arduino In]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-nodered-arduino.png){: height="200"}
+        **Potentiometer Input**
+        Receives an Arduino signal
+        as a JavaScript message.
+      - ![Function]([[COURSE_IMAGES]]/slidecontent/spectrum-circuit-nodered-function.png){: height="200"}
+        **Conversion Function**
+        Converts the potentiometer signal
+        into the correct message
+        for the LED.
+      - ![Arduino Outputs]([[COURSE_IMAGES]]/slidecontent/spectrum-led-nodered-arduino-out.png){: height="200"}
+        **LED Outputs**
+        Sends the JavaScript message
+        as an Arduino signal.
+      {:.flex-list}
+
+
+##########
+
+
+  - title: circuit-arduino-nodes
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Circuit Arduino Nodes
+
+      ![Full Circuit with Arduino Nodes]([[COURSE_IMAGES]]/slidecontent/binary-circuit-arduino-nodes.png)
+
+      Link the Arduino input and ouput directly.
+
+      The LED should be on when the button is pressed down.
+      {:.checkpoint}
+
+
+
+##########
+
+
+  - title: circuit-function-node
+
+    notes: |
+
+      Use a function to convert the button's voltage reading to an on/off message for the LED.
+
+    content: |
+
+      ## Conversion Function
+
+      ![Full Circuit with Function Node]([[COURSE_IMAGES]]/slidecontent/binary-circuit-function-node.png)
+
+      Link a function between the `in` node and the `out` node,
+      so we can manipulate the value being passed along.
+
+
+##########
+
+
+  - title: circuit-function-code
+
+    notes: |
+
+      We don't need to store the state this time.
+
+    content: |
+
+      ## Function Code
+
+      ```javascript
+      var dialValue = msg.payload;
+      var redOn = false;
+      var greenOn = false;
+      var blueOn = false;
+
+      if(dialValue < 300){
+          redOn = true;
+      } else if(dialValue > 900) {
+          blueOn = true;
+      } else {
+          greenOn = true;
+      }
+
+      var redMessage = { payload: redOn };
+      var greenMessage = { payload: greenOn };
+      var blueMessage = { payload: blueOn };
+
+      return [redMessage, greenMessage, blueMessage];
+      ```
+
+      Paste this code into your `function` config popup,
+      in the code editor section.
+
+
+##########
+
+
+  - title: circuit-function-code-shorter
+
+    notes: |
+
+      We don't need to store the state this time.
+
+    content: |
+
+      ## Shorter Function Code
+
+      ```javascript
+      var dial = msg.payload;
+
+      var messages = [
+          {payload: (dial <= 300)}, // red
+          {payload: (dial > 300 && dial < 900)}, // green
+          {payload: (dial >= 900)} //blue
+      ]
+
+      return messages;
+      ```
+      **For experienced coders:**
+      This code does exactly the same thing,
+      but is a bit shorter.
+
+
+##########
+
+  - title: circuit-deploy
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Deploy Your Code
+
+      ![Deploying Node Red code to the Arduino]([[COURSE_IMAGES]]/slidecontent/nodered-deploy-code.png)
+
+      Click the "Deploy" button in Node Red
+      to link your logic flow with the Arduino.
+
+
+##########
+
+  - title: circuit-test
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ## Test
+
+      ![x](x)
+
+      Your button should now act like an on/off switch
+
+      {:.checkpoint}
+
+
+##########
+
+
+  - title: challenge
+
+    notes: |
+
+      Add another LED to your circuit to make a stop/go light.
+
+    content: |
+
+      ![Binary Traffic Light]([[COURSE_IMAGES]]/slidecontent/binary-traffic-light.gif)
+
+      ## Challenge: Stop and Go
+
+      Add a green LED to your circuit to make a stop/go light.
+
+
+
+##########
 
 
   - title: summary
@@ -135,17 +615,16 @@ slides:
 
     notes: |
 
-      Great! Now that's all sorted, let's get started!
+      Cool, now let's try something a little more complex...
 
     content: |
 
-      ![Thumbs Up!]([[BASE_URL]]/assets/images/thumbs-up.svg)
-      <!-- .element height="200" -->
+      ![Thumbs Up!]([[THEME_IMAGES]]/thumbs-up.svg){:height="200"}
 
-      ## Intro Stuff: Complete!
+      ## Binary Blink: Complete!
 
-      Great, now it's time for the fun stuff...
+      Cool, now let's try something a little more complex...
 
-      [Take me to the next chapter!](../jquerybasics)
+      [Take me to the next chapter!](spectrum)
 
 ---

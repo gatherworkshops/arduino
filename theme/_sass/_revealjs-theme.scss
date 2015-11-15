@@ -177,6 +177,19 @@ $titleTextShadow: 2px 2px 1px darken($theme-color, 20%);
 			text-align: center;
 		}
 
+		&>.info-sheet-slide {
+
+			text-align: left;
+
+			img {
+				float: left;
+				display: block;
+				padding-right: 20px;
+				margin-right: 20px;
+				height: 400px;
+			}
+		}
+
 		
 		// overrides for section title slides
 		&>.title-slide {
