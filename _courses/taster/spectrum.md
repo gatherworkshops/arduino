@@ -90,7 +90,7 @@ slides:
 
     content: |
 
-      ![RGB LED Diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-led-info-diagram.png)
+      ![RGB LED Diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-led-info-diagram.svg){: height="450"}
 
       ## RBG LEDs
 
@@ -253,6 +253,8 @@ slides:
     content: |
 
       ## Test Green and Blue 
+
+      ![Multiple Inject Nodes]([[COURSE_IMAGES]]/slidecontent/spectrum-led-all-colors-test.png){: height="450"}
 
       Add two more flows to test the green and blue.
 
@@ -599,11 +601,13 @@ slides:
 
     content: |
 
-      ![Binary Traffic Light]([[COURSE_IMAGES]]/slidecontent/binary-traffic-light.gif)
+      ![Spectrum Mood Light]([[COURSE_IMAGES]]/slidecontent/spectrum-cat.gif){: height="350"}
 
-      ## Challenge: Stop and Go
+      ## Challenge: Mood Lighting
 
-      Add a green LED to your circuit to make a stop/go light.
+      Modify the conversion function to output 5 or more colours.
+
+      **Bonus points:** Fade the LED through a continuous spectrum.
 
 
 
