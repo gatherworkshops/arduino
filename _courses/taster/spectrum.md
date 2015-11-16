@@ -336,7 +336,7 @@ slides:
 
       ## Receive a Message from the Arduino
 
-      ![Button Input Node Configuration]([[COURSE_IMAGES]]/slidecontent/binary-button-arduino-node.png){: height="450"}
+      ![Button Input Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-arduino-node.png){: height="450"}
 
       Drag an `arduino in` node into your workspace and configure it.
 
@@ -356,7 +356,7 @@ slides:
 
       ![Button Debug Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-debug-node.png){: height="450"}
 
-      Drag a `debug` node into your workspace and configure it.
+      Drag a `debug` node into your workspace. The default configuration is fine.
 
 
 ##########
@@ -372,10 +372,9 @@ slides:
 
       ## Connect the nodes
 
-      ![Join potentiometer Nodes]([[COURSE_IMAGES]]/slidecontent/binary-button-join-nodes.png){: height="450"}
+      ![Join potentiometer Nodes]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-join-nodes.png){: height="450"}
 
-      Click and drag the small square on the `arduino` node,
-      and attach it to the `debug` node.
+      Join your `arduino` node to your `debug` node.
 
 
 ##########
@@ -458,32 +457,12 @@ slides:
 
       ## Circuit Arduino Nodes
 
-      ![Full Circuit with Arduino Nodes]([[COURSE_IMAGES]]/slidecontent/binary-circuit-arduino-nodes.png)
+      ![Full Circuit with all nodes]([[COURSE_IMAGES]]/slidecontent/spectrum-circuit-all-nodes.png)
 
-      Link the Arduino input and ouput directly.
+      Link your `arduino input` to the three `arduino output` nodes
+      via a `function`, like we did last time.
 
-      The LED should be on when the button is pressed down.
-      {:.checkpoint}
-
-
-
-##########
-
-
-  - title: circuit-function-node
-
-    notes: |
-
-      Use a function to convert the button's voltage reading to an on/off message for the LED.
-
-    content: |
-
-      ## Conversion Function
-
-      ![Full Circuit with Function Node]([[COURSE_IMAGES]]/slidecontent/binary-circuit-function-node.png)
-
-      Link a function between the `in` node and the `out` node,
-      so we can manipulate the value being passed along.
+      This time your function requires three outputs instead of one.
 
 
 ##########
@@ -581,12 +560,11 @@ slides:
 
     content: |
 
-      ## Test
+      ## Full Circuit Test
 
-      ![x](x)
+      Turn the dial to change the colour of your LED.
 
-      Your button should now act like an on/off switch
-
+      Your potentiometer should now act like a colour picker.
       {:.checkpoint}
 
 
@@ -625,10 +603,10 @@ slides:
 
       ![Thumbs Up!]([[THEME_IMAGES]]/thumbs-up.svg){:height="200"}
 
-      ## Binary Blink: Complete!
+      ## Spectrum Spinner: Complete!
 
-      Cool, now let's try something a little more complex...
+      Yay, onwards to the next adventure...
 
-      [Take me to the next chapter!](spectrum)
+      [Take me to the next chapter!](flexor)
 
 ---
