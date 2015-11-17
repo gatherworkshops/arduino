@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Spectrum Spinner
+title: Accelerator
 slides:
 
   - title: title-page
@@ -14,8 +14,8 @@ slides:
 
       ![Gather Workshops Logo]([[THEME_IMAGES]]/gw_logo.png)
 
-      # Spectrum Spinner
-      _All the colours of the rainbow._
+      # Accelerator
+      _Control motor speed via a touchpad_
 
 
 ##########
@@ -30,7 +30,8 @@ slides:
 
       ## What We Are Making
 
-      Change the colour of a light by turning a dial.
+      A motor which will spin based on 
+      a speed reading from a soft touch pad.
 
 
 ##########
@@ -40,31 +41,42 @@ slides:
 
     notes: |
 
-      RGB LED, Button, Wires
+      Motor, Transistor, Diode, 330&#937; Resistor
+
+      Soft Potentiometer, 10k Resistor, Wires
 
     content: |
 
       ## Bits We Need
 
-      - ![RGB LED]([[COURSE_IMAGES]]/slidecontent/arduino-led-rgb.svg){: height="200"}
-        **RGB LED**
-        A visual output for our circuit
-      - ![Button]([[COURSE_IMAGES]]/slidecontent/arduino-potentiometer.svg){: height="200"}
-        **Potentiometer**
-        A dial which outputs a range of values
-      - ![10k Ohm Resistor]([[COURSE_IMAGES]]/slidecontent/arduino-resistor-330ohm.svg){: height="200"}
-        **3x 330&#937; Resistor**
-        To regulate the voltage to the LED
+      - ![Motor]([[COURSE_IMAGES]]/slidecontent/arduino-motor.png){: height="200"}
+        **Motor**
+        The visual output for our circuit
+      - ![Transistor]([[COURSE_IMAGES]]/slidecontent/arduino-transistor.png){: height="200"}
+        **Transistor**
+        To amplify the current to the motor
+      - ![Diode]([[COURSE_IMAGES]]/slidecontent/arduino-diode.png){: height="200"}
+        **Diode**
+        A one-way valve for the current
+      - ![330 Ohm Resistor]([[COURSE_IMAGES]]/slidecontent/arduino-resistor-330ohm.svg){: height="200"}
+        **330&#937; Resistor**
+      {:.flex-list}
+
+      - ![Soft Potentiometer]([[COURSE_IMAGES]]/slidecontent/arduino-soft-potentiometer.png){: height="200"}
+        **Soft Potentiometer**
+      - ![10k Resistor]([[COURSE_IMAGES]]/slidecontent/arduino-resistor-10k.svg){: height="200"}
+        **10k Resistor**
       - ![Wire]([[COURSE_IMAGES]]/slidecontent/arduino-wire.svg){: height="200"}
         **Wires**
         To connect everything together!
       {:.flex-list}
 
 
+
 ###########
 
 
-  - title: led-overview
+  - title: motor-overview
 
     notes: |
 
@@ -72,16 +84,16 @@ slides:
 
     content: |
 
-      ## LED Overview
+      ## Motor Overview
 
-      Setting up our LED will once again consist of two parts:
+      Setting up our motor will once again consist of two parts:
       the physical components, and the logical components
 
 
 ###########
 
 
-  - title: led-info-sheet
+  - title: motor-info-sheet
     class: info-sheet-slide
 
     notes: |
@@ -90,24 +102,51 @@ slides:
 
     content: |
 
-      ![RGB LED Diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-led-info-diagram.svg){: height="450"}
+      ![Motor Diagram]([[COURSE_IMAGES]]/slidecontent/arduino-motor.png){: height="450"}
 
-      ## RBG LEDs
+      ## Motor
 
-      This LED can display a range of colours 
-      by mixing together levels of red, green and blue.
-
-      It has four pins: Red, Earth, Green, and Blue.
-
-      It requires 330 ohm resistors for each colour pin,
-      to keep values sent to the pins from interfering
-      with each other.
+      The motor's speed is determined by the voltage you put through it.
 
 
 ###########
 
 
-  - title: led-physical-components
+  - title: transistor-info-sheet
+    class: info-sheet-slide
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ![Transistor Diagram]([[COURSE_IMAGES]]/slidecontent/arduino-transistor.png){: height="450"}
+
+      ## Transistor
+
+
+###########
+
+
+  - title: diode-info-sheet
+    class: info-sheet-slide
+
+    notes: |
+
+      :)
+
+    content: |
+
+      ![Diode Diagram]([[COURSE_IMAGES]]/slidecontent/arduino-diode.png){: height="450"}
+
+      ## Diode    
+
+
+###########
+
+
+  - title: motor-physical-components
 
     notes: |
 
@@ -115,11 +154,11 @@ slides:
 
     content: |
 
-      ## Physical Components <br>of the LED Circuit
+      ## Physical Components <br>of the Motor Circuit
 
-      ![Output wiring diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-led-wiring-diagram.svg){: height="550"}
+      ![Motor wiring diagram]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-wiring-diagram.svg){: height="550"}
 
-      Set up your LED as in the diagram.
+      Set up your motor as in the diagram.
 
 
 ##########

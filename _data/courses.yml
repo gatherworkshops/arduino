@@ -16,8 +16,8 @@ taster:
     description: Value ranges with dials and lights
     published: false
 
-  - name: flexor
+  - name: motor
     subtitle: Chapter Three
-    title: Flexi Follower
+    title: Motorised 
     description: Synchronising input ranges with rotation
     published: false
