@@ -32,6 +32,8 @@ slides:
 
     content: |
 
+      ![Rainbow Dash turning light on and off]([[COURSE_IMAGES]]/slidecontent/binary-demo.gif)
+
       ## What We Are Making
 
       Turn a light on and off by pushing a button.
@@ -59,7 +61,7 @@ slides:
       - ![10k Ohm Resistor]([[COURSE_IMAGES]]/slidecontent/arduino-resistor-10k.svg){: height="100"}
         **10k Resistor**
         To regulate the voltage readings from the button
-      - ![Wire]([[COURSE_IMAGES]]/slidecontent/arduino-wire.png){: height="100"}
+      - ![Wire]([[COURSE_IMAGES]]/slidecontent/arduino-wire.svg){: height="100"}
         **Wires**
         To connect everything together!
       {:.flex-list}
@@ -113,11 +115,11 @@ slides:
 
       ## Logical Components <br>of the LED Circuit
 
-      - ![Test Button]([[COURSE_IMAGES]]/slidecontent/nodered-inject.svg){: height="200"}
+      - ![Test Button]([[COURSE_IMAGES]]/slidecontent/binary-led-nodered-inject.png){: height="200"}
         **Test Button**
         On-screen button, sends message
         that light should turn on.
-      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/nodered-arduino-out.svg){: height="200"}
+      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/binary-led-nodered-arduino.png){: height="200"}
         **Light Output**
         Converts test button message
         into an Arduino signal.
@@ -267,11 +269,11 @@ slides:
 
       ## Logical Components <br>of the Button Circuit
 
-      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/arduino-out.svg){: height="200"}
+      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/binary-button-nodered-arduino.png){: height="200"}
         **Button Input**
         Converts the Arduino signal
         into a JavaScript message.
-      - ![Test Button]([[COURSE_IMAGES]]/slidecontent/test-button.svg){: height="200"}
+      - ![Test Button]([[COURSE_IMAGES]]/slidecontent/binary-button-nodered-debug.png){: height="200"}
         **Debug Logger**
         Displays the JS message on
         the screen when received.
@@ -386,16 +388,16 @@ slides:
 
       ## Logical Components <br>of the whole circuit
 
-      - ![Arduino In]([[COURSE_IMAGES]]/slidecontent/nodered-arduino-in.svg){: height="200"}
+      - ![Arduino In]([[COURSE_IMAGES]]/slidecontent/binary-button-nodered-arduino.png){: height="200"}
         **Button Input**
         Receives an Arduino signal
         as a JavaScript message.
-      - ![Function]([[COURSE_IMAGES]]/slidecontent/nodered-function.svg){: height="200"}
+      - ![Function]([[COURSE_IMAGES]]/slidecontent/binary-circuit-nodered-function.png){: height="200"}
         **Conversion Function**
         Converts the button signal
         into the correct message
         for the LED.
-      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/nodered-arduino-out.svg){: height="200"}
+      - ![Arduino Out]([[COURSE_IMAGES]]/slidecontent/binary-led-nodered-arduino.png){: height="200"}
         **LED Output**
         Sends the JavaScript message
         as an Arduino signal.
@@ -417,7 +419,7 @@ slides:
 
       ![Full Circuit with Arduino Nodes]([[COURSE_IMAGES]]/slidecontent/binary-circuit-arduino-nodes.png)
 
-      Link the Arduino input and ouput directly.
+      Link the Arduino input and output directly.
 
       The LED should be on when the button is pressed down.
       {:.checkpoint}
@@ -543,9 +545,7 @@ slides:
 
     content: |
 
-      ## Test
-
-      ![x](x)
+      ## Test your circuit
 
       Your button should now act like an on/off switch
 
