@@ -8,16 +8,13 @@ taster:
     subtitle: Chapter One
     title: Binary Blink
     description: On and off states with buttons and lights
-    published: false
 
   - name: spectrum
     subtitle: Chapter Two
     title: Spinning Spectrum
     description: Value ranges with dials and lights
-    published: false
 
   - name: motor
     subtitle: Chapter Three
-    title: Motorised 
-    description: Synchronising input ranges with rotation
-    published: false
+    title: Accelerator 
+    description: Synchronising input ranges with a motor
