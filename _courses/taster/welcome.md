@@ -68,7 +68,6 @@ slides:
       - Favourite thing?
       - Super power?
       - First name?
-      
       {:.flex-list}
 
 
@@ -114,7 +113,7 @@ slides:
 
       ## SparkFun Inventor's Kit
 
-      ![SparkFun Inventor's Kit]([[COURSE_IMAGES]]/slidecontent/sparkfun-inventors-kit.jpg){: height="350"}
+      ![SparkFun Inventor's Kit]([[COURSE_IMAGES]]/slidecontent/welcome-sparkfun-inventors-kit.jpg){: height="450"}
 
       We are using the Sparkfun Inventor's Kit v3.2
 
@@ -132,7 +131,7 @@ slides:
 
       ## Arduino App
 
-      ![Arduino Logo]([[COURSE_IMAGES]]/slidecontent/arduino-logo.png){: height="350"}
+      ![Arduino Logo]([[COURSE_IMAGES]]/slidecontent/welcome-arduino-logo.png){: height="350"}
 
       We need the Arduino App to set up our board.
 
@@ -150,7 +149,7 @@ slides:
 
       ## Node Red
 
-      ![Node Red Logo]([[COURSE_IMAGES]]/slidecontent/node-red-logo.png){: height="350"}
+      ![Node Red Logo]([[COURSE_IMAGES]]/slidecontent/welcome-nodered-logo.png){: height="350"}
 
       We are using Node Red as a visual code editor.
 
@@ -168,7 +167,7 @@ slides:
 
       ## Setting Up Your Arduino
 
-      ![Arduino with Breadboard wiring diagram]([[COURSE_IMAGES]]/slidecontent/redboard-breadboard-wiring-diagram.svg){: height="450"}
+      ![Arduino with Breadboard wiring diagram]([[COURSE_IMAGES]]/slidecontent/welcome-breadboard-wiring-diagram.svg){: height="450"}
 
       Plug your Arduino into your computer and link up the breadboard.
 
