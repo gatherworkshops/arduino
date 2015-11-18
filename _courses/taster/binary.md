@@ -36,8 +36,6 @@ slides:
 
       Turn a light on and off by pushing a button.
 
-      <iframe frameborder='0' height='448' marginheight='0' marginwidth='0' scrolling='no' src='https://123d.circuits.io/circuits/1195802-the-unnamed-circuit/embed#breadboard' width='650'></iframe>
-
 
 ##########
 
