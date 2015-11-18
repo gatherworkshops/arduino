@@ -102,11 +102,17 @@ slides:
 
     content: |
 
-      ![Motor Diagram]([[COURSE_IMAGES]]/slidecontent/arduino-motor.png){: height="450"}
+      ![Motor Diagram]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-info-diagram.svg){: height="550"}
 
       ## Motor
 
       The motor's speed is determined by the voltage you put through it.
+
+      We send the motor an **analog signal** which is a number between 0 and 255.
+
+      The motor needs to be plugged into a digital pin which supports **Pulse Width Modulation** (PWM)
+
+      PWM allows us to send analog signals via a digital pin.
 
 
 ###########
@@ -164,7 +170,7 @@ slides:
 ##########
 
 
-  - title: led-logical-components
+  - title: motor-logical-components
 
     notes: |
 
@@ -172,23 +178,21 @@ slides:
 
     content: |
 
-      ## Logical Components <br>of the LED Circuit
+      ## Logical Components <br>of the Motor Circuit
 
-      - ![Test Buttons]([[COURSE_IMAGES]]/slidecontent/spectrum-led-nodered-inject.png){: height="200"}
+      - ![Test Buttons]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-nodered-inject.png){: height="200"}
         **Test Buttons**
-        On-screen buttons, one for each 
-        LED colour component.
-      - ![Arduino Outputs]([[COURSE_IMAGES]]/slidecontent/spectrum-led-nodered-arduino-out.png){: height="200"}
-        **Light Output**
-        One Arduino pin output for each
-        LED colour component.
+        One for "off" and one for "on".
+      - ![Arduino Outputs]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-nodered-arduino-out.png){: height="200"}
+        **Arduino Output**
+        Send the analog value to the motor.
       {:.flex-list}
 
 
 ##########
 
 
-  - title: led-out-node
+  - title: motor-out-node
 
     notes: |
 
@@ -200,7 +204,7 @@ slides:
 
       ## Pass a Message Out to the Arduino
 
-      ![LED Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-led-arduino-node.png){: height="450"}
+      ![Motor Node Configuration]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-arduino-node.png){: height="450"}
 
       Drag an `arduino out` node into your workspace and configure it.
 
@@ -208,7 +212,7 @@ slides:
 ##########
 
 
-  - title: led-inject-node
+  - title: motor-inject-on-node
 
     notes: |
 
@@ -218,7 +222,7 @@ slides:
 
       ## Inject a Message
 
-      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-led-inject-node.png){: height="450"}
+      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-on-node.png){: height="450"}
 
       Drag an `inject` node into your workspace and configure it.
 
@@ -226,7 +230,25 @@ slides:
 ##########
 
 
-  - title: led-join-nodes
+  - title: motor-inject-off-node
+
+    notes: |
+
+      Drag an `inject` node into your workspace and configure it.
+
+    content: |
+
+      ## Inject a Message
+
+      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-off-node.png){: height="450"}
+
+      Drag an `inject` node into your workspace and configure it.
+
+
+##########
+
+
+  - title: motor-join-nodes
 
     notes: |
 
@@ -236,7 +258,7 @@ slides:
 
       ## Connect the nodes
 
-      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-led-join-nodes.png){: height="450"}
+      ![Inject Node Configuration]([[COURSE_IMAGES]]/slidecontent/accelerator-motor-join-nodes.png){: height="450"}
 
       Click and drag the small square on the `inject` node,
       and attach it to the `arduino out` node.
@@ -245,7 +267,7 @@ slides:
 ##########
 
 
-  - title: led-deploy
+  - title: motor-deploy
 
     notes: |
 
@@ -264,7 +286,7 @@ slides:
 ##########
 
 
-  - title: led-test
+  - title: motor-test
 
     notes: |
 
@@ -272,32 +294,9 @@ slides:
 
     content: |
 
-      ## Test the LED Output
+      ## Test the Motor Output
 
-      Click the square trigger button on the `inject` node.
-
-      Your LED should turn red.
-      {: .checkpoint}
-
-
-##########
-
-
-  - title: led-all-colours-test
-
-    notes: |
-
-      Check that your LED works by turning it on.
-
-    content: |
-
-      ## Test Green and Blue 
-
-      ![Multiple Inject Nodes]([[COURSE_IMAGES]]/slidecontent/spectrum-led-all-colors-test.png){: height="450"}
-
-      Add two more flows to test the green and blue.
-
-      The test buttons should all work correctly.
+      The on-screen buttons should turn the motor on and off.
       {: .checkpoint}
 
 
@@ -331,7 +330,7 @@ slides:
 
       ## Physical Components <br>of the Potentiometer Circuit
 
-      ![Potentiometer wiring diagram]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-wiring-diagram.svg){: height="550"}
+      ![Potentiometer wiring diagram]([[COURSE_IMAGES]]/slidecontent/accelerator-potentiometer-wiring-diagram.svg){: height="550"}
 
       Set up your potentiometer as in the diagram.
 
@@ -349,11 +348,11 @@ slides:
 
       ## Logical Components <br>of the Potentiometer Circuit
 
-      - ![Arduino In]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-nodered-arduino.png){: height="200"}
+      - ![Arduino In]([[COURSE_IMAGES]]/slidecontent/accelerator-potentiometer-nodered-arduino.png){: height="200"}
         **Potentiometer Input**
         Converts the Arduino signal
         into a JavaScript message.
-      - ![Debug Node]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-nodered-debug.png){: height="200"}
+      - ![Debug Node]([[COURSE_IMAGES]]/slidecontent/accelerator-potentiometer-nodered-debug.png){: height="200"}
         **Debug Logger**
         Displays the JS message on
         the screen when received.
@@ -375,7 +374,7 @@ slides:
 
       ## Receive a Message from the Arduino
 
-      ![Button Input Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-arduino-node.png){: height="450"}
+      ![Button Input Node Configuration]([[COURSE_IMAGES]]/slidecontent/accelerator-potentiometer-arduino-node.png){: height="450"}
 
       Drag an `arduino in` node into your workspace and configure it.
 
@@ -393,7 +392,7 @@ slides:
 
       ## Debug the Incoming Data
 
-      ![Button Debug Node Configuration]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-debug-node.png){: height="450"}
+      ![Button Debug Node Configuration]([[COURSE_IMAGES]]/slidecontent/accelerator-potentiometer-debug-node.png){: height="450"}
 
       Drag a `debug` node into your workspace. The default configuration is fine.
 
@@ -411,7 +410,7 @@ slides:
 
       ## Connect the nodes
 
-      ![Join potentiometer Nodes]([[COURSE_IMAGES]]/slidecontent/spectrum-potentiometer-join-nodes.png){: height="450"}
+      ![Join potentiometer Nodes]([[COURSE_IMAGES]]/slidecontent/accelerator-potentiometer-join-nodes.png){: height="450"}
 
       Join your `arduino` node to your `debug` node.
 
@@ -494,7 +493,7 @@ slides:
 
       ## Circuit Arduino Nodes
 
-      ![Full Circuit with all nodes]([[COURSE_IMAGES]]/slidecontent/spectrum-circuit-all-nodes.png)
+      ![Full Circuit with all nodes]([[COURSE_IMAGES]]/slidecontent/accelerator-circuit-all-nodes.png)
 
       Link your `arduino input` to the three `arduino output` nodes
       via a `function`, like we did last time.
@@ -516,24 +515,28 @@ slides:
       ## Function Code
 
       ```javascript
-      var dialValue = msg.payload;
-      var redOn = false;
-      var greenOn = false;
-      var blueOn = false;
+      var pressurePoint = msg.payload;
+      var lowestSpeed = 130;
+      var highestSpeed = 255;
+      var maxPoint = 1024;
 
-      if(dialValue < 300){
-          redOn = true;
-      } else if(dialValue > 900) {
-          blueOn = true;
+      if(pressurePoint < 100) {
+          msg.payload = 0;
       } else {
-          greenOn = true;
+
+
+      var percentTotalSpeed = pressurePoint / maxPoint;
+
+      var speedRange = highestSpeed - lowestSpeed;
+
+      var speedAboveMin = percentTotalSpeed * speedRange;
+
+      var finalSpeed = lowestSpeed + speedAboveMin;
+
+      msg.payload = finalSpeed;
       }
 
-      var redMessage = { payload: redOn };
-      var greenMessage = { payload: greenOn };
-      var blueMessage = { payload: blueOn };
-
-      return [redMessage, greenMessage, blueMessage];
+      return msg;
       ```
 
       Paste this code into your `function` config popup,
@@ -599,9 +602,9 @@ slides:
 
       ## Full Circuit Test
 
-      Turn the dial to change the colour of your LED.
+      Press different points on the soft potentiometer.
 
-      Your potentiometer should now act like a colour picker.
+      Your motor should spin at different speeds.
       {:.checkpoint}
 
 
