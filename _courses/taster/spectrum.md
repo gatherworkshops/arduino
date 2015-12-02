@@ -28,6 +28,8 @@ slides:
 
     content: |
 
+      ![RGB LED]([[COURSE_IMAGES]]/slidecontent/spectrum-demo.gif)
+
       ## What We Are Making
 
       Change the colour of a light by turning a dial.
@@ -605,6 +607,6 @@ slides:
 
       Yay, onwards to the next adventure...
 
-      [Take me to the next chapter!](flexor)
+      [Take me to the next chapter!](accelerator)
 
 ---

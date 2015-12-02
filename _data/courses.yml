@@ -11,10 +11,10 @@ taster:
 
   - name: spectrum
     subtitle: Chapter Two
-    title: Spinning Spectrum
+    title: Spectrum Spinner
     description: Value ranges with dials and lights
 
-  - name: motor
+  - name: accelerator
     subtitle: Chapter Three
     title: Accelerator 
     description: Synchronising input ranges with a motor

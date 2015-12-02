@@ -523,17 +523,12 @@ slides:
       if(pressurePoint < 100) {
           msg.payload = 0;
       } else {
+        var percentTotalSpeed = pressurePoint / maxPoint;
+        var speedRange = highestSpeed - lowestSpeed;
+        var speedAboveMin = percentTotalSpeed * speedRange;
+        var finalSpeed = lowestSpeed + speedAboveMin;
 
-
-      var percentTotalSpeed = pressurePoint / maxPoint;
-
-      var speedRange = highestSpeed - lowestSpeed;
-
-      var speedAboveMin = percentTotalSpeed * speedRange;
-
-      var finalSpeed = lowestSpeed + speedAboveMin;
-
-      msg.payload = finalSpeed;
+        msg.payload = finalSpeed;
       }
 
       return msg;
@@ -557,15 +552,20 @@ slides:
       ## Shorter Function Code
 
       ```javascript
-      var dialPosition = msg.payload;
+      // mapping function
+      getSpeed = function(currentPressure) {
+        var pressureMax = 1024;
+        var motorMin = 130;
+        var motorMax = 255;
+        var speed = currentPressure * (motorMax - motorMin) / pressureMax + motorMin;
 
-      var messages = [
-          {payload: (dialPosition <= 300)}, // red
-          {payload: (dialPosition > 300 && dialPosition < 900)}, // green
-          {payload: (dialPosition >= 900)} //blue
-      ]
+        return speed;
+      }
 
-      return messages;
+      msg.payload = (msg.payload > 100) ? getSpeed(msg.payload) : 0;
+
+      return msg;
+
       ```
       **For experienced coders:**
       This code does exactly the same thing,
@@ -611,27 +611,6 @@ slides:
 ##########
 
 
-  - title: challenge
-
-    notes: |
-
-      Add another LED to your circuit to make a stop/go light.
-
-    content: |
-
-      ![Spectrum Mood Light]([[COURSE_IMAGES]]/slidecontent/spectrum-cat.gif){: height="350"}
-
-      ## Challenge: Mood Lighting
-
-      Modify the conversion function to output 5 or more colours.
-
-      **Bonus points:** Fade the LED through a continuous spectrum.
-
-
-
-##########
-
-
   - title: summary
     class: centered-slide
 
@@ -643,10 +622,8 @@ slides:
 
       ![Thumbs Up!]([[THEME_IMAGES]]/thumbs-up.svg){:height="200"}
 
-      ## Spectrum Spinner: Complete!
+      ## Accelerator: Complete!
 
-      Yay, onwards to the next adventure...
-
-      [Take me to the next chapter!](flexor)
+      Well done :) That's everything!
 
 ---
