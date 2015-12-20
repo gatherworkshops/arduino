@@ -13,7 +13,8 @@ exclude: [
 	"package.json", 
 	"README.md", 
 	"arduino.sublime-project", 
-	"arduino.sublime-workspace"
+	"arduino.sublime-workspace",
+  "psd"
 ]
 
 kramdown:
