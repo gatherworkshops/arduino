@@ -2,5 +2,5 @@ node_modules
 .sass-cache/*.scssc
 *.scssc
 .DS_Store
-
+/.sass-cache/*
 /.DS_Store
