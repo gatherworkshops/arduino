@@ -6,7 +6,15 @@ theme_images: "/arduino/theme/assets/images"
 course_images: "/arduino/media/images"
 
 markdown: kramdown
-exclude: ["node_modules", "Gemfile", "Gruntfile.js", "package.json", "README.md"]
+exclude: [
+	"node_modules", 
+	"Gemfile", 
+	"Gruntfile.js", 
+	"package.json", 
+	"README.md", 
+	"arduino.sublime-project", 
+	"arduino.sublime-workspace"
+]
 
 kramdown:
   input: GFM
